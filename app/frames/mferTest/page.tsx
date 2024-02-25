@@ -28,7 +28,7 @@ const frameMetadata = getFrameMetadata({
 
   image: {
     src: imageUrl,
-    aspectRatio: '1:1',
+    aspectRatio: '1.91:1',
   },
   postUrl: `${NEXT_PUBLIC_URL}/frames/mferTest/api/frame`,
 });

@@ -11,7 +11,7 @@ export async function GET() {
     (
       <div
         style={{
-          fontSize: 60,
+          fontSize: 70,
           color: 'black',
           background: 'white',
           width: '100%',
@@ -27,8 +27,8 @@ export async function GET() {
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: 800,
+      height: 600,
       fonts: [
         {
           name: 'SartoshiScript',
