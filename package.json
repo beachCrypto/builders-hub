@@ -1,6 +1,6 @@
 {
-  "name": "a-frame-in-100-lines",
-  "version": "0.9.4",
+  "name": "builders-hub",
+  "version": "0.0",
   "scripts": {
     "build": "rm -rf .next && next build",
     "dev": "next dev",
@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@coinbase/onchainkit": "0.9.4",
+    "@next/font": "^14.1.0",
     "fs": "^0.0.1-security",
     "next": "^14.1.0",
     "react": "^18.2.0",

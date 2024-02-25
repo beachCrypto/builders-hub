@@ -4,7 +4,7 @@ export const runtime = 'edge';
 
 export async function GET() {
   const fontData = await fetch(
-    new URL('../../../SartoshiScript-Regular.otf', import.meta.url),
+    new URL('../../../../../public/SartoshiScript-Regular.otf', import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -23,7 +23,7 @@ export async function GET() {
           fontFamily: '"SartoshiScript"',
         }}
       >
-        Hello world!
+        Builders Hub
       </div>
     ),
     {

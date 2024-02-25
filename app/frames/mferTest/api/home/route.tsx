@@ -1,15 +1,17 @@
 import { ImageResponse } from 'next/og';
-// App router includes @vercel/og.
-// No need to install it.
 
 export const runtime = 'edge';
 
 export async function GET() {
+  const fontData = await fetch(
+    new URL('../../../../../public/SartoshiScript-Regular.otf', import.meta.url),
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 40,
+          fontSize: 60,
           color: 'black',
           background: 'white',
           width: '100%',
@@ -18,14 +20,22 @@ export async function GET() {
           textAlign: 'center',
           justifyContent: 'center',
           alignItems: 'center',
+          fontFamily: '"SartoshiScript"',
         }}
       >
-        Test
+        are you a mfer?
       </div>
     ),
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: 'SartoshiScript',
+          data: fontData,
+          style: 'normal',
+        },
+      ],
     },
   );
 }
