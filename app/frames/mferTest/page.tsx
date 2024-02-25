@@ -7,30 +7,15 @@ const sartoshiFont = localFont({
   src: '../../../public/SartoshiScript-Regular.otf',
 });
 
-const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferTest/api/home`;
+const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/areYouAMfer`;
 
 const frameMetadata = getFrameMetadata({
-  buttons: [
-    {
-      label: 'Yes',
-    },
-    {
-      label: 'Yes',
-    },
-    {
-      label: 'Yes',
-    },
-    {
-      label: 'Yes',
-    },
-  ],
   // This image will return from an endpoint with satori
 
   image: {
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/mferTestapi/home`,
 });
 
 export const metadata: Metadata = {
@@ -58,7 +43,7 @@ export default function Page() {
         fontSize: '5rem',
       }}
     >
-      <h1>we are all mfers</h1>
+      <h1>join builders hub</h1>
     </div>
   );
 }
