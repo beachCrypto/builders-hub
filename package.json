@@ -1,6 +1,11 @@
 {
   "name": "a-frame-in-100-lines",
   "version": "0.9.4",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "build": "rm -rf .next && next build",
     "dev": "next dev",
