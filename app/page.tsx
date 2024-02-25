@@ -2,7 +2,7 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 
-const imageUrl = `${NEXT_PUBLIC_URL}/api/og`;
+const imageUrl = `${NEXT_PUBLIC_URL}/api/home`;
 
 const frameMetadata = getFrameMetadata({
   buttons: [
