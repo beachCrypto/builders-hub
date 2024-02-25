@@ -4,20 +4,26 @@ export const runtime = 'edge';
 
 export async function GET() {
   const fontData = await fetch(
-    'https://github.com/beachCrypto/builders-hub/blob/380e00fda4740926314698b498df6a84fb682b7d/SartoshiScript-Regular.otf',
+    new URL(
+      '../../../SartoshiScript-Regular.otf',
+      import.meta.url,
+    ),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
       <div
         style={{
-          backgroundColor: 'white',
-          height: '100%',
+          fontSize: 60,
+          color: 'black',
+          background: 'white',
           width: '100%',
-          fontSize: 100,
+          height: '100%',
+          padding: '50px 200px',
+          textAlign: 'center',
+          justifyContent: 'center',
+          alignItems: 'center',
           fontFamily: '"SartoshiScript"',
-          paddingTop: '100px',
-          paddingLeft: '50px',
         }}
       >
         Hello world!
