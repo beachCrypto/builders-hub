@@ -1,8 +1,13 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
+import { join } from 'path';
+import * as fs from 'fs';
 
 const imageUrl = `${NEXT_PUBLIC_URL}/api/home`;
+
+const fontPath = join(process.cwd(), 'SartoshiScript-Regular.otf');
+let fontData = fs.readFileSync(fontPath);
 
 const frameMetadata = getFrameMetadata({
   buttons: [

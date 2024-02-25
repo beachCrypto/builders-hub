@@ -1,6 +1,9 @@
 import { ImageResponse } from 'next/og';
-// App router includes @vercel/og.
-// No need to install it.
+import { join } from 'path';
+import * as fs from 'fs';
+
+const fontPath = join(process.cwd(), 'SartoshiScript-Regular.otf');
+let fontData = fs.readFileSync(fontPath);
 
 export const runtime = 'edge';
 
@@ -26,6 +29,14 @@ export async function GET() {
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          data: fontData,
+          name: 'SartoshiScript',
+          style: 'normal',
+          weight: 400,
+        },
+      ],
     },
   );
 }
