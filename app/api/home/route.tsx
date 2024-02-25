@@ -1,13 +1,10 @@
-import { ImageResponse } from 'next/og.ts';
+import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
 export async function GET() {
   const fontData = await fetch(
-    new URL(
-      '../../../SartoshiScript-Regular.otf',
-      import.meta.url,
-    ),
+    new URL('../../../SartoshiScript-Regular.otf', import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(

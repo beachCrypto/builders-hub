@@ -1,6 +1,6 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config.ts';
+import { NEXT_PUBLIC_URL } from './config';
 
 const imageUrl = `${NEXT_PUBLIC_URL}/api/home`;
 
