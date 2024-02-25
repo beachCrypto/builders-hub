@@ -2,8 +2,6 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 
-const imageUrl = 'https://main.d9uhrsd2xrvr9.amplifyapp.com/api/og';
-
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
@@ -21,7 +19,7 @@ const frameMetadata = getFrameMetadata({
   ],
   // This image will return from an endpoint with satori
   image: {
-    src: 'imageUrl',
+    src: `${NEXT_PUBLIC_URL}`,
     aspectRatio: '1:1',
   },
   input: {
@@ -36,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'are you a mfer',
     description: 'we are all mfers',
-    images: [imageUrl],
+    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
   other: {
     ...frameMetadata,
@@ -46,7 +44,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>are you a mfer?</h1>
+      <h1>we are all mfers</h1>
     </>
   );
 }
