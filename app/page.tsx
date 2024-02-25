@@ -28,13 +28,15 @@ const frameMetadata = getFrameMetadata({
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
+const imageUrl = 'https://main.d9uhrsd2xrvr9.amplifyapp.com/api/og';
+
 export const metadata: Metadata = {
   title: 'are you a mfer',
   description: 'we are all mfers',
   openGraph: {
     title: 'are you a mfer',
     description: 'we are all mfers',
-    images: [`${NEXT_PUBLIC_URL}/api/og`],
+    images: [imageUrl],
   },
   other: {
     ...frameMetadata,
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>we are all mfers</h1>
+      <h1>are you a mfer?</h1>
     </>
   );
 }
