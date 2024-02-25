@@ -19,7 +19,7 @@ const frameMetadata = getFrameMetadata({
   ],
   // This image will return from an endpoint with satori
   image: {
-    src: `${NEXT_PUBLIC_URL}`,
+    src: `${NEXT_PUBLIC_URL}/park-3.png`,
     aspectRatio: '1:1',
   },
   input: {
