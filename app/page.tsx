@@ -2,6 +2,8 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 
+const imageUrl = `${NEXT_PUBLIC_URL}/api/og`;
+
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
@@ -18,8 +20,9 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   // This image will return from an endpoint with satori
+
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: imageUrl,
     aspectRatio: '1:1',
   },
   input: {
