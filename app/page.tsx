@@ -17,8 +17,9 @@ const frameMetadata = getFrameMetadata({
       action: 'post_redirect',
     },
   ],
+  // This image will return from an endpoint with satori
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `${NEXT_PUBLIC_URL}`,
     aspectRatio: '1:1',
   },
   input: {
@@ -28,12 +29,12 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
-  description: 'LFG',
+  title: 'are you a mfer',
+  description: 'we are all mfers',
   openGraph: {
-    title: 'zizzamia.xyz',
-    description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    title: 'are you a mfer',
+    description: 'we are all mfers',
+    images: [`${NEXT_PUBLIC_URL}/api/og`],
   },
   other: {
     ...frameMetadata,
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>we are all mfers</h1>
     </>
   );
 }
