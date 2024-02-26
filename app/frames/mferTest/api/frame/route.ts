@@ -9,7 +9,10 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/alwaysHaveBeen`;
+  const imageUrl1 = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/alwaysHaveBeen`;
+  const imageUrl2 = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/everyoneIsAMfer`;
+  const imageUrl3 = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/justGettingStarted`;
+  const imageUrl4 = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/gmfer`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
@@ -24,11 +27,95 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       getFrameHtmlResponse({
         buttons: [
           {
-            label: `MFERS 2 DEEP 🌲🌲`,
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
           },
         ],
         image: {
-          src: imageUrl,
+          src: imageUrl1,
+        },
+        postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+      }),
+    );
+  }
+
+  if (message?.button === 2) {
+    return new NextResponse(
+      getFrameHtmlResponse({
+        buttons: [
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+        ],
+        image: {
+          src: imageUrl2,
+        },
+        postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+      }),
+    );
+  }
+
+  if (message?.button === 3) {
+    return new NextResponse(
+      getFrameHtmlResponse({
+        buttons: [
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+        ],
+        image: {
+          src: imageUrl3,
+        },
+        postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+      }),
+    );
+  }
+
+  if (message?.button === 4) {
+    return new NextResponse(
+      getFrameHtmlResponse({
+        buttons: [
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+          {
+            label: 'Yes',
+          },
+        ],
+        image: {
+          src: imageUrl4,
         },
         postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
       }),
@@ -39,11 +126,20 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `MFERS 1 DEEP 🌲🌲`,
+          label: 'Yes',
+        },
+        {
+          label: 'Yes',
+        },
+        {
+          label: 'Yes',
+        },
+        {
+          label: 'Yes',
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/park-1.png`,
+        src: imageUrl1,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),

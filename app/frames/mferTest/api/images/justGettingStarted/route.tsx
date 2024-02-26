@@ -23,7 +23,7 @@ export async function GET() {
           fontFamily: '"SartoshiScript"',
         }}
       >
-        always have been
+        just getting started
       </div>
     ),
     {
