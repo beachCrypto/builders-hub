@@ -9,7 +9,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/alwaysHaveBeen`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferTest/api/images/everyoneIsAMfer`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
