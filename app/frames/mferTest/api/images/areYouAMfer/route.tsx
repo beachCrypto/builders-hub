@@ -11,7 +11,7 @@ export async function GET() {
     (
       <div
         style={{
-          fontSize: 70,
+          fontSize: 90,
           color: 'black',
           background: 'white',
           width: '100%',
