@@ -34,10 +34,10 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'are you a mfer',
+  title: 'are you a mfer?',
   description: 'we are all mfers',
   openGraph: {
-    title: 'are you a mfer',
+    title: 'are you a mfer?',
     description: 'we are all mfers',
     images: [imageUrl],
   },
