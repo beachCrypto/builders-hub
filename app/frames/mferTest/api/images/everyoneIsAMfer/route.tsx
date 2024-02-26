@@ -11,7 +11,7 @@ export async function GET() {
     (
       <div
         style={{
-          fontSize: 70,
+          fontSize: 80,
           color: 'black',
           background: 'white',
           width: '100%',
@@ -23,7 +23,7 @@ export async function GET() {
           fontFamily: '"SartoshiScript"',
         }}
       >
-        everyone is a mfer
+        we are all mfers
       </div>
     ),
     {
