@@ -2,6 +2,7 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../../config';
 import localFont from '@next/font/local';
+import Link from 'next/link';
 
 const sartoshiFont = localFont({
   src: '../../../public/SartoshiScript-Regular.otf',
@@ -52,13 +53,14 @@ export default function Page() {
       className={sartoshiFont.className}
       style={{
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        paddingLeft: '25%',
         alignItems: 'center',
-        fontSize: '5rem',
+        fontSize: '3rem',
       }}
     >
-      <h1>join builders hub</h1>
+      <h1>
+        <Link href="https://warpcast.com/buildershub">join builders hub</Link>
+      </h1>
     </div>
   );
 }

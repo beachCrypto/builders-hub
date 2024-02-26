@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 import localFont from '@next/font/local';
+import Link from 'next/link';
 
 const imageUrl = `${NEXT_PUBLIC_URL}/api/home`;
 
@@ -32,10 +33,12 @@ export default function Page() {
         display: 'flex',
         paddingLeft: '25%',
         alignItems: 'center',
-        fontSize: '5rem',
+        fontSize: '4rem',
       }}
     >
-      <h1>builders hub</h1>
+      <h1>
+        <Link href="https://warpcast.com/buildershub">builders hub</Link>
+      </h1>
     </div>
   );
 }
