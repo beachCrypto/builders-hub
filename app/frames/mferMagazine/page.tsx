@@ -26,7 +26,6 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   // This image will return from an endpoint with satori
-
   image: {
     src: imageUrl,
     aspectRatio: '1.91:1',
