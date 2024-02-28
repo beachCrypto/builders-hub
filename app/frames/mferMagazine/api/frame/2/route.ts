@@ -1,6 +1,6 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { NEXT_PUBLIC_URL } from '../../../../config';
+import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
@@ -9,7 +9,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/images/${message?.button}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/images/2`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
@@ -35,7 +35,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/frame/${message?.button}`,
     }),
   );
 }
