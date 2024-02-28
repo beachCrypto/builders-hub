@@ -8,7 +8,7 @@ const sartoshiFont = localFont({
   src: '../../../public/SartoshiScript-Regular.otf',
 });
 
-const imageUrl = `${NEXT_PUBLIC_URL}/mferMagazine/1.png`;
+const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/images/1`;
 
 const frameMetadata = getFrameMetadata({
   buttons: [
@@ -28,7 +28,7 @@ const frameMetadata = getFrameMetadata({
   // This image will return from an endpoint with satori
   image: {
     src: imageUrl,
-    aspectRatio: '1.91:1',
+    aspectRatio: '1:1',
   },
   postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame`,
 });
