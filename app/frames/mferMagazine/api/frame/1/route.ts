@@ -4,7 +4,6 @@ import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
-  let text: string | undefined = '';
 
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
@@ -19,16 +18,16 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: '@mleejr',
+          label: 'mleejr',
         },
         {
-          label: '@sartocrates',
+          label: 'sartocrates',
         },
         {
-          label: '@animated',
+          label: 'animated',
         },
         {
-          label: '@sartoshi',
+          label: 'sartoshi',
         },
       ],
       image: {

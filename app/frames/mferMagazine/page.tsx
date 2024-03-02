@@ -17,16 +17,16 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: '@mleejr',
+      label: 'mleejr',
     },
     {
-      label: '@sartocrates',
+      label: 'sartocrates',
     },
     {
-      label: '@animated',
+      label: 'animated',
     },
     {
-      label: '@sartoshi',
+      label: 'sartoshi',
     },
   ],
   // This image will return from an endpoint with satori
@@ -56,14 +56,14 @@ export default function Page() {
       className={sartoshiFont.className}
       style={{
         display: 'flex',
-        paddingLeft: '25%',
+        paddingLeft: '33%',
         alignItems: 'center',
         fontSize: '3rem',
       }}
     >
-      <h1>
-        <Link href="https://warpcast.com/buildershub">join builders hub</Link>
-      </h1>
+      <h2>
+        <Link href="https://opensea.io/collection/mfer-magazine">mfer magazine</Link>
+      </h2>
     </div>
   );
 }
