@@ -37,7 +37,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame/${message?.button}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame/${message?.button}`,
     }),
   );
 }
