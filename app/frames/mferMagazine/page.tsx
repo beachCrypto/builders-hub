@@ -4,13 +4,17 @@ import { NEXT_PUBLIC_URL } from '../../config';
 import localFont from '@next/font/local';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 const sartoshiFont = localFont({
   src: '../../../public/SartoshiScript-Regular.otf',
 });
 
 const imageUrl = `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/images/1`;
+// getImageData here
 
 const frameMetadata = getFrameMetadata({
+  // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
       label: '@mleejr',
@@ -30,7 +34,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame/`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame/1`,
 });
 
 export const metadata: Metadata = {
