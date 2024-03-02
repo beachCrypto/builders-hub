@@ -34,7 +34,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame/1`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/mferMagazine/api/frame`,
 });
 
 export const metadata: Metadata = {
