@@ -18,16 +18,16 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: '@mleejr',
+          label: 'mleejr',
         },
         {
-          label: '@sartocrates',
+          label: 'sartocrates',
         },
         {
-          label: '@animated',
+          label: 'animated',
         },
         {
-          label: '@sartoshi',
+          label: 'sartoshi',
         },
       ],
       image: {
