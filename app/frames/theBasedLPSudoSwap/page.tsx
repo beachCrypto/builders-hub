@@ -49,7 +49,7 @@ async function getData() {
   try {
     const headers = {
       'content-type': 'application/json',
-      Authorization: `${process.env.DEFINED_API_KEY}` || '',
+      Authorization: process.env.DEFINED_API_KEY || '',
     };
     const requestBody = {
       query: `{
