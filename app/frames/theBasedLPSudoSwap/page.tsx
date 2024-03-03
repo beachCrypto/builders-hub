@@ -1,6 +1,8 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../../config';
+import { DEFINED_API_KEY } from '../../config';
+
 import localFont from '@next/font/local';
 import Link from 'next/link';
 import 'dotenv/config';
@@ -47,7 +49,7 @@ async function getData() {
   try {
     const headers = {
       'content-type': 'application/json',
-      Authorization: process.env.DEFINED_API_KEY || '',
+      Authorization: `${DEFINED_API_KEY}` || '',
     };
     const requestBody = {
       query: `{
@@ -74,9 +76,9 @@ async function getData() {
 }
 
 export default async function Page() {
-  // const theBasedLPData = await getData();
+  const theBasedLPData = await getData();
 
-  // console.log('theBasedLPData', theBasedLPData);
+  console.log('theBasedLPData', theBasedLPData);
 
   return (
     <div className="w-full p-4">
@@ -116,8 +118,8 @@ export default async function Page() {
                 fontSize: '2rem',
               }}
             >
-              <p>Just a test</p>
-              {/* <p>{theBasedLPData.getNftPool.collectionAddress}</p> */}
+              {/* <p>Just a test </p> */}
+              <p>{theBasedLPData.getNftPool.collectionAddress}</p>
             </div>
           </div>
         </div>
