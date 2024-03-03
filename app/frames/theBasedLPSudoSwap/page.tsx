@@ -1,7 +1,7 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../../config';
-import { DEFINED_API_KEY } from '../../config';
+// import { DEFINED_API_KEY } from '../../config';
 
 import localFont from '@next/font/local';
 import Link from 'next/link';
@@ -49,7 +49,7 @@ async function getData() {
   try {
     const headers = {
       'content-type': 'application/json',
-      Authorization: `${DEFINED_API_KEY}` || '',
+      Authorization: `${process.env.DEFINED_API_KEY}` || '',
     };
     const requestBody = {
       query: `{
