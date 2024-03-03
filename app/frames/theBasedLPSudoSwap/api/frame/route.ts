@@ -18,14 +18,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   return new NextResponse(
     getFrameHtmlResponse({
-      buttons: [
-        {
-          label: 'frame dir button 1',
-        },
-        {
-          label: 'frame dir button 2',
-        },
-      ],
       image: {
         src: imageUrl,
         aspectRatio: '1:1',
