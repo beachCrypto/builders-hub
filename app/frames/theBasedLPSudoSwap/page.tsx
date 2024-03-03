@@ -27,7 +27,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/mfersMagazine/api/frame`,
 });
 
 export const metadata: Metadata = {
@@ -74,9 +74,9 @@ async function getData() {
 }
 
 export default async function Page() {
-  const theBasedLPData = await getData();
+  // const theBasedLPData = await getData();
 
-  console.log('theBasedLPData', theBasedLPData);
+  // console.log('theBasedLPData', theBasedLPData);
 
   return (
     <div className="w-full p-4">
@@ -116,7 +116,8 @@ export default async function Page() {
                 fontSize: '2rem',
               }}
             >
-              <p>{theBasedLPData.getNftPool.collectionAddress}</p>
+              <p>Just a test</p>
+              {/* <p>{theBasedLPData.getNftPool.collectionAddress}</p> */}
             </div>
           </div>
         </div>
