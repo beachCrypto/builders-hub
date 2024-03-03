@@ -12,7 +12,7 @@ const sartoshiFont = localFont({
   src: '../../../public/theBasedLP/fonts/VT323/VT323-Regular.ttf',
 });
 
-const imageUrl = `${NEXT_PUBLIC_URL}/theBasedLP/based-lp.gif`;
+const imageUrl = `${NEXT_PUBLIC_URL}/theBasedLP/images/based-lp.gif`;
 // getImageData here
 
 const frameMetadata = getFrameMetadata({
