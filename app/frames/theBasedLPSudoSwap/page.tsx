@@ -91,12 +91,11 @@ export default async function Page() {
           fontSize: '3rem',
         }}
       >
-        <Image src={imageUrl} width={500} height={500} alt="Picture of the author" />
+        <Image src={imageUrl} width={500} height={500} alt="The Base LP" />
 
         <h2>
           <Link
             style={{
-              // float: 'left',
               paddingLeft: '15%',
               fontSize: '3rem',
             }}
