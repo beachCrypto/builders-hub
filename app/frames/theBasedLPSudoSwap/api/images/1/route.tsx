@@ -48,54 +48,46 @@ export async function GET() {
 
   return new ImageResponse(
     (
-      <div tw="w-full p-4 flex">
-        {/* <div tw="w-full flex flex-col h-screen content-center justify-center"> */}
-        <div tw="w-full flex">
-          <div tw="w-full flex">
-            <div
-              style={{
-                position: 'absolute',
-                flexDirection: 'column',
-                paddingTop: '10%',
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: '5rem',
-              }}
-            >
-              THE BASED LP
-              <div
-                style={{
-                  position: 'relative',
-                  flexDirection: 'column',
-                  paddingTop: '5%',
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  fontSize: '3rem',
-                }}
-              >
-                Selling at: {floorT} ETH
-              </div>
-              <div
-                style={{
-                  position: 'relative',
-                  flexDirection: 'column',
-                  paddingTop: '5%',
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  fontSize: '3rem',
-                }}
-              >
-                Buying at: {offerT} ETH
-              </div>
-            </div>
-          </div>
+      <div
+        style={{
+          position: 'absolute',
+          flexDirection: 'column',
+          paddingTop: '10%',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          fontSize: '5rem',
+        }}
+      >
+        THE BASED LP
+        <div
+          style={{
+            position: 'relative',
+            flexDirection: 'column',
+            paddingTop: '5%',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            fontSize: '3rem',
+          }}
+        >
+          Selling at: {floorT} ETH
+        </div>
+        <div
+          style={{
+            position: 'relative',
+            flexDirection: 'column',
+            paddingTop: '5%',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            fontSize: '3rem',
+          }}
+        >
+          Buying at: {offerT} ETH
         </div>
       </div>
     ),
-    // </div>
     {
       width: 800,
       height: 600,
