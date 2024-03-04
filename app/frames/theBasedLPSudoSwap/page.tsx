@@ -29,7 +29,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}app/frames/theBasedLPSudoSwap/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame`,
 });
 
 export const metadata: Metadata = {
