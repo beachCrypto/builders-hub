@@ -31,7 +31,7 @@ export async function GET() {
       height: 600,
       fonts: [
         {
-          name: 'VT323',
+          name: 'SartoshiScript',
           data: fontData,
           style: 'normal',
         },
