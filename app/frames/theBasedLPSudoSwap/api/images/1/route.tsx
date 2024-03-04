@@ -40,11 +40,11 @@ export async function GET() {
     }
   }
 
-  const theBasedLPData = await getData();
+  // const theBasedLPData = await getData();
 
   // const floorT = Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 6);
 
-  const floorT = theBasedLPData.getNftPool.floorT;
+  //const floorT = theBasedLPData.getNftPool.floorT;
 
   return new ImageResponse(
     (
@@ -63,7 +63,7 @@ export async function GET() {
         }}
       >
         Updated
-        <p>Selling at: {floorT} ETH</p>
+        {/* <p>Selling at: {floorT} ETH</p> */}
       </div>
     ),
     {
