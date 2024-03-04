@@ -21,7 +21,7 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: 'Get Sudo Swap Pool Prices',
+      label: 'Click for The Based LP Sudo Swap Pool prices',
     },
   ],
   // This image will return from an endpoint with satori
@@ -112,13 +112,11 @@ export default async function Page() {
             <div
               className={sartoshiFont.className}
               style={{
-                //  float: 'left',
                 paddingLeft: '33%',
                 alignItems: 'center',
                 fontSize: '2rem',
               }}
             >
-              {/* <p>Just a test </p> */}
               <p>{theBasedLPData.getNftPool.collectionAddress}</p>
             </div>
           </div>
