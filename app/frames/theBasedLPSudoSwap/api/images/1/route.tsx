@@ -50,11 +50,10 @@ export async function GET() {
     (
       <div
         style={{
-          position: 'absolute',
+          display: 'flex',
           flexDirection: 'column',
           paddingTop: '10%',
           width: '100%',
-          display: 'flex',
           alignItems: 'center',
           fontSize: '5rem',
         }}
@@ -62,11 +61,10 @@ export async function GET() {
         THE BASED LP
         <div
           style={{
-            position: 'relative',
+            display: 'flex',
             flexDirection: 'column',
             paddingTop: '5%',
             width: '100%',
-            display: 'flex',
             alignItems: 'center',
             fontSize: '3rem',
           }}
@@ -75,11 +73,10 @@ export async function GET() {
         </div>
         <div
           style={{
-            position: 'relative',
+            display: 'flex',
             flexDirection: 'column',
             paddingTop: '5%',
             width: '100%',
-            display: 'flex',
             alignItems: 'center',
             fontSize: '3rem',
           }}
