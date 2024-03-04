@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import Web3 from 'web3';
 
 export const runtime = 'edge';
 
@@ -41,31 +42,44 @@ export async function GET() {
 
   const theBasedLPData = await getData();
 
-  // const floorT = Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 6);
+  const floorT = Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
 
-  // const offerT = Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
-
-  const floorT = theBasedLPData.getNftPool.floorT;
-
-  // const offerT = theBasedLPData.getNftPool.offerT;
+  const offerT = Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          fontSize: 70,
-          color: 'black',
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          padding: '50px 200px',
-          textAlign: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontFamily: '"SartoshiScript"',
-        }}
-      >
-        Number 1<p>Selling at: {floorT} ETH</p>
+      <div tw="w-full p-10 flex">
+        <div tw="w-full p-10 flex flex-col h-screen content-center">
+          <div
+            style={{
+              display: 'flex',
+              paddingLeft: '20%',
+              alignItems: 'center',
+              fontSize: '3rem',
+            }}
+          >
+            <h2>THE BASED LP</h2>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              paddingLeft: '25%',
+              fontSize: '2rem',
+            }}
+          >
+            Selling at: {floorT} ETH
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              paddingTop: '5%',
+              paddingLeft: '25%',
+              fontSize: '2rem',
+            }}
+          >
+            Buying at: {offerT} ETH
+          </div>
+        </div>
       </div>
     ),
     {
@@ -73,7 +87,7 @@ export async function GET() {
       height: 600,
       fonts: [
         {
-          name: 'SartoshiScript',
+          name: 'VT323',
           data: fontData,
           style: 'normal',
         },
