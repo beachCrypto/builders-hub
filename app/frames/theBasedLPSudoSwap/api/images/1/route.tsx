@@ -48,38 +48,38 @@ export async function GET() {
 
   return new ImageResponse(
     (
-      <div tw="w-full p-10 flex">
-        <div tw="w-full p-10 flex flex-col h-screen content-center">
-          <div
-            style={{
-              display: 'flex',
-              paddingLeft: '20%',
-              alignItems: 'center',
-              fontSize: '3rem',
-            }}
-          >
-            <h2>THE BASED LP</h2>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              paddingLeft: '25%',
-              fontSize: '2rem',
-            }}
-          >
-            Selling at: {floorT} ETH
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              paddingTop: '5%',
-              paddingLeft: '25%',
-              fontSize: '2rem',
-            }}
-          >
-            Buying at: {offerT} ETH
-          </div>
+      <div tw="flex">
+        {/* <div tw="w-full p-10 flex flex-col h-screen content-center"> */}
+        <div
+          style={{
+            display: 'flex',
+            paddingLeft: '20%',
+            alignItems: 'center',
+            fontSize: '3rem',
+          }}
+        >
+          <h2>THE BASED LP</h2>
         </div>
+        <div
+          style={{
+            display: 'flex',
+            paddingLeft: '25%',
+            fontSize: '2rem',
+          }}
+        >
+          Selling at: {floorT} ETH
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            paddingTop: '5%',
+            paddingLeft: '25%',
+            fontSize: '2rem',
+          }}
+        >
+          Buying at: {offerT} ETH
+        </div>
+        {/* </div> */}
       </div>
     ),
     {
