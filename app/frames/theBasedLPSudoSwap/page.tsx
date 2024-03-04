@@ -82,46 +82,46 @@ export default async function Page() {
 
   return (
     <div className="w-full p-4">
-      <div className="w-full flex flex-col h-screen content-center justify-center">
+      {/* <div className="w-full flex flex-col h-screen content-center justify-center">
         <div className="w-full sm:w-1/2 lg:w-1/3 bg-gray-50 rounded-xl m-auto">
-          <div className="bg-white rounded shadow px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div
-              className={sartoshiFont.className}
-              style={{
-                // float: 'left',
-                paddingLeft: '33%',
-                alignItems: 'center',
-                fontSize: '3rem',
-              }}
-            >
-              <Image src={imageUrl} width={500} height={500} alt="Picture of the author" />
+          <div className="bg-white rounded shadow px-4 pt-5 pb-4 sm:p-6 sm:pb-4"> */}
+      <div
+        className={sartoshiFont.className}
+        style={{
+          // float: 'left',
+          paddingLeft: '33%',
+          alignItems: 'center',
+          fontSize: '3rem',
+        }}
+      >
+        <Image src={imageUrl} width={500} height={500} alt="Picture of the author" />
 
-              <h2>
-                <Link
-                  style={{
-                    // float: 'left',
-                    paddingLeft: '15%',
-                    fontSize: '3rem',
-                  }}
-                  href="https://based.thelp.xyz/"
-                >
-                  the based lp
-                </Link>
-              </h2>
-            </div>
-            <div
-              className={sartoshiFont.className}
-              style={{
-                paddingLeft: '33%',
-                alignItems: 'center',
-                fontSize: '2rem',
-              }}
-            >
-              <p>{theBasedLPData.getNftPool.collectionAddress}</p>
-            </div>
-          </div>
-        </div>
+        <h2>
+          <Link
+            style={{
+              // float: 'left',
+              paddingLeft: '15%',
+              fontSize: '3rem',
+            }}
+            href="https://based.thelp.xyz/"
+          >
+            the based lp
+          </Link>
+        </h2>
+      </div>
+      <div
+        className={sartoshiFont.className}
+        style={{
+          paddingLeft: '33%',
+          alignItems: 'center',
+          fontSize: '2rem',
+        }}
+      >
+        <p>{theBasedLPData.getNftPool.collectionAddress}</p>
       </div>
     </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
