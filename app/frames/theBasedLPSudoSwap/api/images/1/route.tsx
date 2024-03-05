@@ -46,7 +46,7 @@ export async function GET() {
 
   const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
 
-  const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
+  const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 5);
 
   const time = new Date();
 
@@ -93,6 +93,7 @@ export async function GET() {
             display: 'flex',
             flexDirection: 'column',
             padding: 20,
+            paddingLeft: 40,
             fontSize: '3rem',
           }}
         >
@@ -102,11 +103,11 @@ export async function GET() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            padding: 20,
+            padding: 30,
             fontSize: '2rem',
           }}
         >
-          At : {time.getHours()} : {time.getMinutes()} : {time.getSeconds()}
+          {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} UTC
         </div>
       </div>
     ),
