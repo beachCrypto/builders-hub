@@ -14,6 +14,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const imageUrl = `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/images/${message?.button}`;
 
+  const now = Date.now();
+
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
   }
@@ -29,7 +31,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame/${message?.button}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame/${message?.button}?${now}`,
     }),
   );
 }
