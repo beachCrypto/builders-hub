@@ -53,22 +53,22 @@ export async function GET() {
       <div
         style={{
           display: 'flex',
-          flexDirection: 'column',
-          paddingTop: '10%',
-          width: '100%',
-          alignItems: 'center',
-          fontSize: '5rem',
+          // flexDirection: 'column',
+          // paddingTop: '10%',
+          // width: '100%',
+          // alignItems: 'center',
+          // fontSize: '5rem',
         }}
       >
         THE BASED LP
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            paddingTop: '5%',
-            width: '100%',
-            alignItems: 'center',
-            fontSize: '3rem',
+            // flexDirection: 'column',
+            // paddingTop: '5%',
+            // width: '100%',
+            // alignItems: 'center',
+            // fontSize: '3rem',
           }}
         >
           Selling at: {floorT} ETH
@@ -76,11 +76,11 @@ export async function GET() {
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            paddingTop: '5%',
-            width: '100%',
-            alignItems: 'center',
-            fontSize: '3rem',
+            // flexDirection: 'column',
+            // paddingTop: '5%',
+            // width: '100%',
+            // alignItems: 'center',
+            // fontSize: '3rem',
           }}
         >
           Buying at: {offerT} ETH
