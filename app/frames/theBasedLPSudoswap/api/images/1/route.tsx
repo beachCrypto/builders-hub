@@ -45,13 +45,11 @@ export async function GET() {
 
   const theBasedLPData = await getData();
 
-  // const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
-
   const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether');
 
   const floorTNumber = parseFloat(floorT).toFixed(3);
 
-  const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 5);
+  const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether');
 
   const offerTNumber = parseFloat(offerT).toFixed(3);
 
