@@ -52,12 +52,15 @@ export async function GET() {
     (
       <div
         style={{
+          justifyContent: 'flex-start',
+          alignItems: 'center',
           display: 'flex',
-          // flexDirection: 'column',
-          // paddingTop: '10%',
-          // width: '100%',
-          // alignItems: 'center',
-          // fontSize: '5rem',
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'white',
+          padding: 50,
+          lineHeight: 1.2,
+          fontSize: 24,
         }}
       >
         THE BASED LP Selling at: {floorT} ETH Buying at: {offerT} ETH
