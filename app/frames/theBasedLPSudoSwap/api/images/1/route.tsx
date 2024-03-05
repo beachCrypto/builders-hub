@@ -48,6 +48,8 @@ export async function GET() {
 
   const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
 
+  const time = new Date();
+
   return new ImageResponse(
     (
       <div
@@ -95,6 +97,16 @@ export async function GET() {
           }}
         >
           Buying at: {offerT} ETH
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: 20,
+            fontSize: '2rem',
+          }}
+        >
+          At : {time.getHours()} : {time.getMinutes()} : {time.getSeconds()}
         </div>
       </div>
     ),
