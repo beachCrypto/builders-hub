@@ -75,8 +75,6 @@ async function getData() {
 export default async function Page() {
   const theBasedLPData = await getData();
 
-  console.log('theBasedLPData', theBasedLPData);
-
   return (
     <div className="w-full p-4">
       <div
