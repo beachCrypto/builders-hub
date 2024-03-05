@@ -20,12 +20,13 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   return new NextResponse(
     getFrameHtmlResponse({
-      // buttons: [
-      //   {
-      //     label: 'Click for The Based LP Sudoswap Pool prices',
-
-      //   },
-      // ],
+      buttons: [
+        {
+          action: 'link',
+          label: 'Sudoswap Pool',
+          target: 'https://sudoswap.xyz/#/manage/base/0x6f3714d92e5ac5fb6c9611ea5e860920075b1a77',
+        },
+      ],
       image: {
         src: imageUrl,
         aspectRatio: '1:1',
