@@ -3,6 +3,8 @@ import Web3 from 'web3';
 
 export const runtime = 'edge';
 
+export const revalidate = 0;
+
 export async function GET() {
   const fontData = await fetch(
     new URL('../../../../../../public/theBasedLP/fonts/VT323/VT323-Regular.ttf', import.meta.url),
