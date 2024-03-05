@@ -44,9 +44,9 @@ export async function GET() {
 
   const theBasedLPData = await getData();
 
-  const floorT = Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
+  const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
 
-  const offerT = Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
+  const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 6);
 
   return new ImageResponse(
     (

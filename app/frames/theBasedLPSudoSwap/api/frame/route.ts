@@ -20,9 +20,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   return new NextResponse(
     getFrameHtmlResponse({
+      buttons: [
+        {
+          label: 'Click for The Based LP Sudo Swap Pool prices',
+        },
+      ],
       image: {
         src: imageUrl,
-        aspectRatio: '1:1',
+        aspectRatio: '1.91:1',
       },
       postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame/${message?.button}`,
     }),
