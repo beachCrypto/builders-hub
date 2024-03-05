@@ -60,6 +60,7 @@ export async function GET() {
           height: '100%',
           backgroundColor: 'white',
           padding: 50,
+          paddingTop: 120,
           lineHeight: 1.2,
           fontSize: 24,
         }}
@@ -69,7 +70,8 @@ export async function GET() {
             display: 'flex',
             flexDirection: 'column',
             padding: 20,
-            fontSize: '3rem',
+            paddingTop: 0,
+            fontSize: '5rem',
           }}
         >
           THE BASED LP
@@ -79,7 +81,7 @@ export async function GET() {
             display: 'flex',
             flexDirection: 'column',
             padding: 20,
-            fontSize: '1.5rem',
+            fontSize: '3rem',
           }}
         >
           Selling at: {floorT} ETH
@@ -89,7 +91,7 @@ export async function GET() {
             display: 'flex',
             flexDirection: 'column',
             padding: 20,
-            fontSize: '1.5rem',
+            fontSize: '3rem',
           }}
         >
           Buying at: {offerT} ETH
@@ -97,8 +99,8 @@ export async function GET() {
       </div>
     ),
     {
-      width: 400,
-      height: 300,
+      width: 800,
+      height: 600,
       fonts: [
         {
           name: 'VT323',
@@ -106,6 +108,10 @@ export async function GET() {
           style: 'normal',
         },
       ],
+      headers: {
+        'Content-Type': 'image/png',
+        'Cache-Control': 'max-age=10',
+      },
     },
   );
 }
