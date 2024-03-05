@@ -45,9 +45,15 @@ export async function GET() {
 
   const theBasedLPData = await getData();
 
-  const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
+  // const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether').slice(0, 5);
+
+  const floorT = await Web3.utils.fromWei(theBasedLPData.getNftPool.floorT, 'ether');
+
+  const floorTNumber = parseFloat(floorT).toFixed(3);
 
   const offerT = await Web3.utils.fromWei(theBasedLPData.getNftPool.offerT, 'ether').slice(0, 5);
+
+  const offerTNumber = parseFloat(offerT).toFixed(3);
 
   const time = new Date();
 
@@ -87,7 +93,7 @@ export async function GET() {
             fontSize: '3rem',
           }}
         >
-          Selling at: {floorT} ETH
+          Selling at: {floorTNumber} ETH
         </div>
         <div
           style={{
@@ -98,7 +104,7 @@ export async function GET() {
             fontSize: '3rem',
           }}
         >
-          Buying at: {offerT} ETH
+          Buying at: {offerTNumber} ETH
         </div>
         <div
           style={{
