@@ -12,7 +12,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/images/${message?.button}?${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/images/${message?.button}?${now}`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
@@ -22,14 +22,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: 'Click for The Based LP Sudo Swap Pool prices',
+          label: 'Click for The Based LP Sudoswap Pool prices',
         },
       ],
       image: {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame/${message?.button}?${now}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/${message?.button}?${now}`,
     }),
   );
 }

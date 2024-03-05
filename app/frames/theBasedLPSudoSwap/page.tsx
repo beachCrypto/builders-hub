@@ -27,15 +27,15 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoSwap/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'The Based LP Sudo Swap Pool',
-  description: 'The Based LP Sudo Swap Pool buy and sell prices',
+  title: 'The Based LP Sudoswap Pool',
+  description: 'The Based LP Sudoswap Pool buy and sell prices',
   openGraph: {
-    title: 'The Based LP Sudo Swap Pool',
-    description: 'The Based LP Sudo Swap Pool buy and sell prices',
+    title: 'The Based LP Sudoswap Pool',
+    description: 'The Based LP Sudoswap Pool buy and sell prices',
     images: [imageUrl],
   },
   other: {
