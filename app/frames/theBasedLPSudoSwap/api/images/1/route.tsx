@@ -110,7 +110,6 @@ export async function GET() {
         >
           {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} UTC
         </div>
-
       </div>
     ),
     {
