@@ -19,7 +19,7 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: 'Click for The Based LP Sudo Swap Pool prices',
+      label: 'Get Sudoswap Pool prices for The Based LP',
     },
   ],
   // This image will return from an endpoint with satori
