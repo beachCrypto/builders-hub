@@ -8,8 +8,6 @@ import Link from 'next/link';
 import 'dotenv/config';
 import Image from 'next/image';
 
-export const dynamic = 'force-dynamic';
-
 const sartoshiFont = localFont({
   src: '../../../public/theBasedLP/fonts/VT323/VT323-Regular.ttf',
 });

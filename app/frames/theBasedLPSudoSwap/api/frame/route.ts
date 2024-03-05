@@ -4,8 +4,6 @@ import { NEXT_PUBLIC_URL } from '../../../../config';
 
 export const revalidate = 0;
 
-export const dynamic = 'force-dynamic';
-
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
 
