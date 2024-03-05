@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+
 import Web3 from 'web3';
 
 export const runtime = 'edge';
@@ -109,6 +110,7 @@ export async function GET() {
         >
           {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} UTC
         </div>
+
       </div>
     ),
     {

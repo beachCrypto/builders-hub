@@ -10,6 +10,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
+
   const now = Date.now();
 
   const imageUrl = `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/images/${message?.button}?${now}`;
@@ -23,6 +24,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       buttons: [
         {
           label: 'Click for The Based LP Sudoswap Pool prices',
+
         },
       ],
       image: {

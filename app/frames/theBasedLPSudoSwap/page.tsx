@@ -1,7 +1,6 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../../config';
-// import { DEFINED_API_KEY } from '../../config';
 
 import localFont from '@next/font/local';
 import Link from 'next/link';
