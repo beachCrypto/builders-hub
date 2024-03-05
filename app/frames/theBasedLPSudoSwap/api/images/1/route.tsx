@@ -52,6 +52,7 @@ export async function GET() {
     (
       <div
         style={{
+          flexDirection: 'column',
           justifyContent: 'flex-start',
           alignItems: 'center',
           display: 'flex',
@@ -63,7 +64,36 @@ export async function GET() {
           fontSize: 24,
         }}
       >
-        THE BASED LP Selling at: {floorT} ETH Buying at: {offerT} ETH
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: 20,
+            fontSize: '3rem',
+          }}
+        >
+          THE BASED LP
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: 20,
+            fontSize: '1.5rem',
+          }}
+        >
+          Selling at: {floorT} ETH
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: 20,
+            fontSize: '1.5rem',
+          }}
+        >
+          Buying at: {offerT} ETH
+        </div>
       </div>
     ),
     {
