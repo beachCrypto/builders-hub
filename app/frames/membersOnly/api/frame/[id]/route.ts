@@ -4,7 +4,7 @@ import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 export const revalidate = 0;
 
-const frameNumber = 1;
+let frameNumber = 0;
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
@@ -19,6 +19,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
   }
+  frameNumber = frameNumber + 1;
 
   return new NextResponse(
     getFrameHtmlResponse({
@@ -36,7 +37,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/${frameNumber}?${now}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/${frameNumber}?${now}`,
     }),
   );
 }
