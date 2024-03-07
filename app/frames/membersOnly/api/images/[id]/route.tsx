@@ -7,8 +7,8 @@ let width = 600;
 let height = 600;
 
 export async function GET() {
-  width = width * 2;
-  height = height * 2;
+  width = width * 1.25;
+  height = height * 1.25;
   return new ImageResponse(
     (
       <div
