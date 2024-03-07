@@ -14,6 +14,8 @@ const sartoshiFont = localFont({
 const imageUrl = `${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`;
 // getImageData here
 
+const now = Date.now();
+
 const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
@@ -31,7 +33,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/0`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/?id=0&${now}`,
 });
 
 export const metadata: Metadata = {
