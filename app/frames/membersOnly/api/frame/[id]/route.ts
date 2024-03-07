@@ -1,8 +1,10 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { NEXT_PUBLIC_URL } from '../../../../config';
+import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 export const revalidate = 0;
+
+const frameNumber = 1;
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
@@ -34,7 +36,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/1?${now}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/${frameNumber}?${now}`,
     }),
   );
 }
