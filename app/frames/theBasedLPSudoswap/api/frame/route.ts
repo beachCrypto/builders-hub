@@ -10,7 +10,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-
   const now = Date.now();
 
   const imageUrl = `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/images/${message?.button}?${now}`;
@@ -23,15 +22,16 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: 'Click for The Based LP Sudoswap Pool prices',
-
+          action: 'link',
+          label: 'Sudoswap Pool',
+          target: 'https://sudoswap.xyz/#/manage/base/0x6f3714d92e5ac5fb6c9611ea5e860920075b1a77',
         },
       ],
       image: {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/${message?.button}?${now}`,
+      // postUrl: `${NEXT_PUBLIC_URL}/frames/theBasedLPSudoswap/api/frame/${message?.button}?${now}`,
     }),
   );
 }

@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: 'Get Sudoswap Pool prices for The Based LP',
+      label: 'The Based LP Sudoswap Pool prices',
     },
   ],
   // This image will return from an endpoint with satori
@@ -74,8 +74,6 @@ async function getData() {
 
 export default async function Page() {
   const theBasedLPData = await getData();
-
-  console.log('theBasedLPData', theBasedLPData);
 
   return (
     <div className="w-full p-4">
