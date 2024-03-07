@@ -21,7 +21,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/images/id=${id}?${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/images/${id}=${id}?${now}`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
@@ -43,7 +43,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/id=${id}?${now}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/${id}=${id}?${now}`,
     }),
   );
 }
