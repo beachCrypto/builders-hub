@@ -16,6 +16,10 @@ const imageUrl = `${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`;
 
 const now = Date.now();
 
+const stringID = '0';
+
+const id = Number(stringID);
+
 const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
@@ -33,7 +37,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/?id=0&${now}`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/${id}?id=${id}&${now}`,
 });
 
 export const metadata: Metadata = {
