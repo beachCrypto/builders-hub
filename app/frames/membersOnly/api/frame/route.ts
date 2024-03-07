@@ -1,7 +1,6 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { NEXT_PUBLIC_URL } from '../../../../../config';
-import { Metadata, ResolvingMetadata } from 'next';
+import { NEXT_PUBLIC_URL } from '../../../../config';
 import { useSearchParams } from 'next/navigation';
 
 export const revalidate = 0;
@@ -21,7 +20,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/images/${id}=${id}?${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/images?id=${id}&${now}`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];

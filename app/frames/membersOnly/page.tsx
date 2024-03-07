@@ -11,14 +11,14 @@ const sartoshiFont = localFont({
   src: '../../../public/membersOnly/font/Quicksand/static/Quicksand-Light.ttf',
 });
 
-const imageUrl = `${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`;
-// getImageData here
-
 const now = Date.now();
 
 const stringID = '0';
 
 const id = Number(stringID);
+
+const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&${now}`;
+// getImageData here
 
 const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
@@ -37,12 +37,12 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/${id}?id=${id}&${now}`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame?id=${id}&${now}`,
 });
 
 export const metadata: Metadata = {
   title: 'Members Only Button',
-  description: 'TMembers Only Button',
+  description: 'Members Only Button',
   openGraph: {
     title: 'Members Only Button',
     description: 'Members Only Button',
@@ -97,7 +97,7 @@ export default async function Page() {
           fontSize: '3rem',
         }}
       >
-        <Image src={imageUrl} width={500} height={500} alt="Beach Crypto Members Only" />
+        <Image src={imageUrl} width={600} height={600} alt="Beach Crypto Members Only" />
 
         <h2>
           <Link

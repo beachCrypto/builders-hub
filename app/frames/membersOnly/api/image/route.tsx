@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { NEXT_PUBLIC_URL } from '../../../../../config';
+import { NEXT_PUBLIC_URL } from '../../../../config';
 
 export const runtime = 'edge';
 
@@ -7,8 +7,8 @@ let width = 600;
 let height = 600;
 
 export async function GET() {
-  width = width * 1.25;
-  height = height * 1.25;
+  // width = width * 1.25;
+  // height = height * 1.25;
   return new ImageResponse(
     (
       <div
@@ -32,7 +32,7 @@ export async function GET() {
       </div>
     ),
     {
-      width: 800,
+      width: 600,
       height: 600,
     },
   );
