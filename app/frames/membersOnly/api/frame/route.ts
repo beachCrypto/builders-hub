@@ -1,3 +1,5 @@
+'use client';
+
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../../../config';
@@ -20,7 +22,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&time=${now}`;
+
   // const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image`;
 
   if (isValid) {
