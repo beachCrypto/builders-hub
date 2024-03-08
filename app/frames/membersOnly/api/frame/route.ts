@@ -8,11 +8,11 @@ export const revalidate = 0;
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
 
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
-  const stringID = searchParams.get('id');
+  // const stringID = searchParams.get('id');
 
-  const id = Number(stringID) + 1;
+  // const id = Number(stringID) + 1;
 
   const body: FrameRequest = await req.json();
 
@@ -20,7 +20,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&${now}`;
+  // const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
@@ -30,7 +31,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `Changing text ${id}`,
+          label: `Changing text`,
         },
         {
           action: 'link',
@@ -42,7 +43,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame${id}=${id}?${now}`,
+      // postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame${id}=${id}?${now}`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame`,
     }),
   );
 }
