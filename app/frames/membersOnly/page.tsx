@@ -20,7 +20,7 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: 'Enlarge member',
+      label: 'Test Deployment',
     },
     {
       action: 'link',
