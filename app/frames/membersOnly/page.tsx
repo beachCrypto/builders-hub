@@ -7,17 +7,13 @@ import Link from 'next/link';
 import 'dotenv/config';
 import Image from 'next/image';
 
+const now = Date.now();
+
 const sartoshiFont = localFont({
   src: '../../../public/membersOnly/font/Quicksand/static/Quicksand-Light.ttf',
 });
 
-const now = Date.now();
-
-const stringID = '0';
-
-const id = Number(stringID);
-
-const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image/0`;
+const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image/0?${now}`;
 // getImageData here
 
 const frameMetadata = getFrameMetadata({
