@@ -17,7 +17,7 @@ const stringID = '0';
 
 const id = Number(stringID);
 
-const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image?id=${id}&time=${now}`;
+const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image/0`;
 // getImageData here
 
 const frameMetadata = getFrameMetadata({
@@ -37,8 +37,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  // postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame?id=${id}&time=${now}`,
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1`,
 });
 
 export const metadata: Metadata = {

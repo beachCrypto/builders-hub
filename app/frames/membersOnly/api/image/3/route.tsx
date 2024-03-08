@@ -1,10 +1,7 @@
 import { ImageResponse } from 'next/og';
-import { NEXT_PUBLIC_URL } from '../../../../config';
+import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 export const runtime = 'edge';
-
-let width = 600;
-let height = 600;
 
 export async function GET() {
   // width = width * 1.25;
@@ -22,8 +19,8 @@ export async function GET() {
         }}
       >
         <img
-          width={width}
-          height={height}
+          width={900}
+          height={900}
           src={`${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`}
           style={{
             borderWidth: 10,
@@ -32,8 +29,8 @@ export async function GET() {
       </div>
     ),
     {
-      width: 600,
-      height: 600,
+      width: 900,
+      height: 900,
     },
   );
 }
