@@ -23,7 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `Changed`,
+          label: `Frame 1`,
         },
         {
           action: 'link',
