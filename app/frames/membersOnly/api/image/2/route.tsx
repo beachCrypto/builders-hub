@@ -21,7 +21,7 @@ export async function GET() {
           height={900}
           src={`${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`}
           style={{
-            borderWidth: 10,
+            borderWidth: 5,
           }}
         />
       </div>
