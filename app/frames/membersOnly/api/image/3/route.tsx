@@ -4,8 +4,6 @@ import { NEXT_PUBLIC_URL } from '../../../../../config';
 export const runtime = 'edge';
 
 export async function GET() {
-  // width = width * 1.25;
-  // height = height * 1.25;
   return new ImageResponse(
     (
       <div
