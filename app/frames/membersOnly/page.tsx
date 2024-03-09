@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const now = Date.now();
 
-const sartoshiFont = localFont({
+const quicksandFont = localFont({
   src: '../../../public/membersOnly/font/Quicksand/static/Quicksand-Light.ttf',
 });
 
@@ -20,11 +20,11 @@ const frameMetadata = getFrameMetadata({
   // generateMetadata instead of getFrameMetadata here
   buttons: [
     {
-      label: 'Test Deployment',
+      label: 'enlarge member',
     },
     {
       action: 'link',
-      label: 'Buy member',
+      label: 'buy member',
       target: 'https://mint.club/frametech/beachcrypto/member',
     },
   ],
@@ -33,7 +33,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1?${now}`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1`,
 });
 
 export const metadata: Metadata = {
@@ -85,7 +85,7 @@ export default async function Page() {
   return (
     <div className="w-full p-4">
       <div
-        className={sartoshiFont.className}
+        className={quicksandFont.className}
         style={{
           // float: 'left',
           paddingLeft: '33%',
