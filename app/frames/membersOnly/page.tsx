@@ -33,7 +33,7 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1`,
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1?${now}`,
 });
 
 export const metadata: Metadata = {
