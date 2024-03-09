@@ -23,7 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `Enlarge member`,
+          label: `Chill`,
         },
         {
           action: 'link',
@@ -35,7 +35,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/6`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame`,
     }),
   );
 }

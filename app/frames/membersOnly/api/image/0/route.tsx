@@ -3,6 +3,8 @@ import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 export const runtime = 'edge';
 
+export const revalidate = 0;
+
 export async function GET() {
   return new ImageResponse(
     (
@@ -21,7 +23,7 @@ export async function GET() {
           height={600}
           src={`${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`}
           style={{
-            borderWidth: 10,
+            borderWidth: 5,
           }}
         />
       </div>

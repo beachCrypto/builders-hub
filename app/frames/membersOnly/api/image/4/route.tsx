@@ -17,8 +17,8 @@ export async function GET() {
         }}
       >
         <img
-          width={1000}
-          height={1000}
+          width={1200}
+          height={1200}
           src={`${NEXT_PUBLIC_URL}/membersOnly/images/beachcryptomember.png`}
           style={{
             borderWidth: 10,
@@ -27,8 +27,8 @@ export async function GET() {
       </div>
     ),
     {
-      width: 1000,
-      height: 1000,
+      width: 600,
+      height: 600,
     },
   );
 }
