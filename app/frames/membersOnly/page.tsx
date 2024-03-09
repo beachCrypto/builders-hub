@@ -24,7 +24,7 @@ const frameMetadata = getFrameMetadata({
     },
     {
       action: 'link',
-      label: 'buy member',
+      label: 'mint member',
       target: 'https://mint.club/frametech/beachcrypto/member',
     },
   ],

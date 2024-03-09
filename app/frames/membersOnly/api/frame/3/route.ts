@@ -27,7 +27,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
         {
           action: 'link',
-          label: 'Buy member',
+          label: 'mint member',
           target: 'https://mint.club/frametech/beachcrypto/member',
         },
       ],
