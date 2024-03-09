@@ -13,7 +13,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const now = Date.now();
 
-  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/images/1?${now}`;
+  const imageUrl = `${NEXT_PUBLIC_URL}/frames/membersOnly/api/image/1?${now}`;
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
