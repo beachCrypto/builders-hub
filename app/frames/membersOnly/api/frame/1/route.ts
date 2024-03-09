@@ -23,7 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `Frame 1`,
+          label: `enlarge member`,
         },
         {
           action: 'link',

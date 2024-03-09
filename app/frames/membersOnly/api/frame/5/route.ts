@@ -35,7 +35,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame1`,
     }),
   );
 }
