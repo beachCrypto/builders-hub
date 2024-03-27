@@ -7,6 +7,8 @@ import Link from 'next/link';
 import 'dotenv/config';
 import Image from 'next/image';
 
+export const revalidate = 0;
+
 const now = Date.now();
 
 const quicksandFont = localFont({

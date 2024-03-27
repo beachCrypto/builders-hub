@@ -3,8 +3,6 @@ import { NEXT_PUBLIC_URL } from '../../../../../config';
 
 export const runtime = 'edge';
 
-export const revalidate = 0;
-
 export async function GET() {
   return new ImageResponse(
     (

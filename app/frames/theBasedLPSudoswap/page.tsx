@@ -1,13 +1,12 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
-import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../../config';
-
+import type { Metadata } from 'next';
 import localFont from '@next/font/local';
+import Image from 'next/image';
 import Link from 'next/link';
 import 'dotenv/config';
-import Image from 'next/image';
 
-const sartoshiFont = localFont({
+const VT323Font = localFont({
   src: '../../../public/theBasedLP/fonts/VT323/VT323-Regular.ttf',
 });
 
@@ -30,11 +29,11 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'The Based LP Sudoswap Pool',
-  description: 'The Based LP Sudoswap Pool buy and sell prices',
+  title: 'The Based LP and tn100x',
+  description: 'The Based LP Sudoswap Pool buy and sell prices and tn100x',
   openGraph: {
-    title: 'The Based LP Sudoswap Pool',
-    description: 'The Based LP Sudoswap Pool buy and sell prices',
+    title: 'The Based LP Sudoswap Pool and tn100x',
+    description: 'The Based LP Sudoswap Pool buy and sell prices and tn100x',
     images: [imageUrl],
   },
   other: {
@@ -78,7 +77,7 @@ export default async function Page() {
   return (
     <div className="w-full p-4">
       <div
-        className={sartoshiFont.className}
+        className={VT323Font.className}
         style={{
           // float: 'left',
           paddingLeft: '33%',
@@ -101,7 +100,7 @@ export default async function Page() {
         </h2>
       </div>
       <div
-        className={sartoshiFont.className}
+        className={VT323Font.className}
         style={{
           paddingLeft: '33%',
           alignItems: 'center',
