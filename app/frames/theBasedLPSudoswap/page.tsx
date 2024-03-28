@@ -72,43 +72,28 @@ async function getData() {
 }
 
 export default async function Page() {
-  const theBasedLPData = await getData();
-
   return (
-    <div className="w-full p-4">
-      <div
-        className={VT323Font.className}
-        style={{
-          // float: 'left',
-          paddingLeft: '33%',
-          alignItems: 'center',
-          fontSize: '3rem',
-        }}
-      >
-        <Image src={imageUrl} width={500} height={500} alt="The Base LP" />
-
-        <h2>
-          <Link
-            style={{
-              paddingLeft: '15%',
-              fontSize: '3rem',
-            }}
-            href="https://based.thelp.xyz/"
-          >
-            the based lp
-          </Link>
-        </h2>
-      </div>
-      <div
-        className={VT323Font.className}
-        style={{
-          paddingLeft: '33%',
-          alignItems: 'center',
-          fontSize: '2rem',
-        }}
-      >
-        <p>{theBasedLPData.getNftPool.collectionAddress}</p>
+    <div className="flex items-center justify-center">
+      <div className="w-fit p-10">
+        <Image src={imageUrl} width={400} height={400} alt="The Base LP" />
+        <div className={VT323Font.className}>
+          <div className="text-3xl p-4 underline text-center">
+            <Link href="https://based.thelp.xyz/">the based lp</Link>
+          </div>
+        </div>
       </div>
     </div>
+
+    // <div className="w-full p-4">
+    //   <div className={VT323Font.className}>
+    //     <Image src={imageUrl} width={500} height={500} alt="The Base LP" />
+
+    //     <div>
+    //       <p className="text-lg">
+    //         <Link href="https://based.thelp.xyz/">the based lp</Link>
+    //       </p>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
