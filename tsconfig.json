@@ -18,6 +18,6 @@
       },
     ],
   },
-  "include": ["custom.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["custom.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "**/**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["contracts", "node_modules"],
 }

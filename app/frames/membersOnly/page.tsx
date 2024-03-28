@@ -7,6 +7,11 @@ import Link from 'next/link';
 import 'dotenv/config';
 import Image from 'next/image';
 
+<<<<<<< HEAD
+=======
+export const revalidate = 0;
+
+>>>>>>> main
 const now = Date.now();
 
 const quicksandFont = localFont({
@@ -24,7 +29,11 @@ const frameMetadata = getFrameMetadata({
     },
     {
       action: 'link',
+<<<<<<< HEAD
       label: 'buy member',
+=======
+      label: 'mint member',
+>>>>>>> main
       target: 'https://mint.club/frametech/beachcrypto/member',
     },
   ],
@@ -33,7 +42,11 @@ const frameMetadata = getFrameMetadata({
     src: imageUrl,
     aspectRatio: '1:1',
   },
+<<<<<<< HEAD
   postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1`,
+=======
+  postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/1?${now}`,
+>>>>>>> main
 });
 
 export const metadata: Metadata = {

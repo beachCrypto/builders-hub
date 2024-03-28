@@ -27,7 +27,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
         {
           action: 'link',
-          label: 'Buy member',
+          label: 'mint member',
           target: 'https://mint.club/frametech/beachcrypto/member',
         },
       ],
@@ -35,7 +35,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         src: imageUrl,
         aspectRatio: '1:1',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/3`,
+      postUrl: `${NEXT_PUBLIC_URL}/frames/membersOnly/api/frame/3?${now}`,
     }),
   );
 }
